@@ -40,3 +40,77 @@ class Main
         input.close ();
     }
 }
+
+
+
+here is an advanced calculator program in java which can support basic as well as advanced arthmetic operations like exponentiation, square root, and modulus!
+    
+    
+    
+    
+    import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double num1, num2, result;
+        String operator;
+
+        System.out.print("Enter the first number: ");
+        num1 = scanner.nextDouble();
+
+        System.out.print("Enter an operator (+, -, *, /, ^, sqrt, %): ");
+        operator = scanner.next();
+
+        switch (operator) {
+            case "+":
+                System.out.print("Enter the second number: ");
+                num2 = scanner.nextDouble();
+                result = num1 + num2;
+                System.out.println("Result: " + result);
+                break;
+            case "-":
+                System.out.print("Enter the second number: ");
+                num2 = scanner.nextDouble();
+                result = num1 - num2;
+                System.out.println("Result: " + result);
+                break;
+            case "*":
+                System.out.print("Enter the second number: ");
+                num2 = scanner.nextDouble();
+                result = num1 * num2;
+                System.out.println("Result: " + result);
+                break;
+            case "/":
+                System.out.print("Enter the second number: ");
+                num2 = scanner.nextDouble();
+                if (num2 != 0) {
+                    result = num1 / num2;
+                    System.out.println("Result: " + result);
+                } else {
+                    System.out.println("Error: Division by zero");
+                }
+                break;
+            case "^":
+                System.out.print("Enter the exponent: ");
+                num2 = scanner.nextDouble();
+                result = Math.pow(num1, num2);
+                System.out.println("Result: " + result);
+                break;
+            case "sqrt":
+                result = Math.sqrt(num1);
+                System.out.println("Result: " + result);
+                break;
+            case "%":
+                System.out.print("Enter the modulus: ");
+                num2 = scanner.nextDouble();
+                result = num1 % num2;
+                System.out.println("Result: " + result);
+                break;
+            default:
+                System.out.println("Error: Invalid operator");
+                break;
+        }
+    }
+}
+
